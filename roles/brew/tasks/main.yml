@@ -1,0 +1,30 @@
+- name: Install homebrew packages
+  homebrew:
+    name: '{{ item }}'
+    state: latest
+    update_homebrew: yes
+  loop: '{{ homebrew_packages }}'
+  tags:
+    - brew
+
+- name: Install homebrew cask packages
+  homebrew_cask:
+    name: '{{ item }}'
+    state: installed
+  loop: '{{ homebrew_cask_packages }}'
+  tags:
+    - brew-cask
+
+- name: homebrew cleanup
+  command: brew cleanup
+  tags:
+    - brew
+    - brew-cask
+
+- name: Ensure configured homebrew services are started.
+  command: "brew services start {{ item }}"
+  register: brew_service_result
+  changed_when: "'Successfully started' in brew_service_result.stdout"
+  with_items: "{{ homebrew_services }}"
+  tags:
+    - brew

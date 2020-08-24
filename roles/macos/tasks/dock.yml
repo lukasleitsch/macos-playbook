@@ -1,0 +1,44 @@
+- name: Hide recent apps
+  osx_defaults:
+    domain: com.apple.dock
+    key: show-recents
+    type: bool
+    value: false
+  notify:
+    - killall Dock
+
+- name: Set the icon size of Dock items.
+  osx_defaults:
+    domain: com.apple.dock
+    key: tilesize
+    type: float
+    value: 42
+  notify:
+    - killall Dock
+
+- name: Automatically hide and show the Dock.
+  osx_defaults:
+    domain: com.apple.dock
+    key: autohide
+    type: bool
+    value: true
+  notify:
+    - killall Dock
+
+- name: Set the autohide time.
+  osx_defaults:
+    domain: com.apple.dock
+    key: autohide-time-modifier
+    type: float
+    value: 0.12
+  notify:
+    - killall Dock
+
+- name: Remove the autohide delay.
+  osx_defaults:
+    domain: com.apple.dock
+    key: autohide-delay
+    type: float
+    value: 0.12
+  notify:
+    - killall Dock

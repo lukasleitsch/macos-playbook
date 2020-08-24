@@ -1,0 +1,34 @@
+- git:
+    repo: git@gitlab.leitsch.org:lukas/dotfiles.git
+    dest: "{{ lookup('env','HOME') }}/.dotfiles"
+
+- name: 'Change shell to fish'
+  become: yes
+  user:
+    name: '{{ ansible_user_id }}'
+    shell: /usr/local/bin/fish
+    state: present
+
+- name: "Check for existing oh-my-fish install"
+  stat:
+    path: "{{ ansible_env.HOME }}/.local/share/omf"
+  register: oh_my_fish_dir
+
+- debug: msg="{{ oh_my_fish_dir }}"
+
+- name: "Setup oh-my-fish"
+  block:
+    - name: "Download oh-my-fish installer"
+      get_url:
+        url: https://get.oh-my.fish
+        dest: "{{ ansible_env.HOME }}/.oh-my-fish-install.sh"
+        owner: "{{ lookup('env','USER') }}"
+        mode: u+rwx
+    - name: "Install oh-my-fish"
+      command: "{{ ansible_env.HOME }}/.oh-my-fish-install.sh --noninteractive --yes"
+    - name: "Clean up oh-my-fish installer"
+      file:
+        path: "{{ ansible_env.HOME }}/.oh-my-fish-install.sh"
+        state: absent
+  when: oh_my_fish_dir.stat.exists == False
+  become_user: "{{ lookup('env','USER') }}"

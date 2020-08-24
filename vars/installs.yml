@@ -1,0 +1,75 @@
+homebrew_packages:
+  - asimov
+  - composer
+  - fish
+  - git
+  - htop
+  - mailhog
+  - mariadb
+  - mas
+  - ncdu
+  - php
+  - redis
+  - rsync
+  - Schniz/tap/fnm
+  - speedtest-cli
+  - wp-cli
+  - wget
+
+homebrew_cask_packages:
+  - 1password
+  - alfred
+  - appcleaner
+  - balenaetcher
+  - banking-4
+  - bartender
+  - browserosaurus
+  - carbon-copy-cloner
+  - discord
+  - docker
+  - firefox
+  - fujitsu-scansnap-home
+  - google-chrome
+  - grandtotal
+  - hazel
+  - homebrew/cask-drivers/logitech-options
+  - homebrew/cask-versions/google-chrome-canary
+  - imageoptim
+  - istat-menus
+  - iterm2
+  - kap
+  - moneymoney
+  - phpstorm
+  - pock
+  - portfolioperformance
+  - resilio-sync
+  - rocket
+  - signal
+  - slack
+  - spotify
+  - sublime-text
+  - tableplus
+  - teamviewer
+  - tower
+  - transmit
+  - tunnelblick
+  - ultimaker-cura
+  - virtualbox
+  - virtualbox-extension-pack
+  - visual-studio-code
+  - whatsapp
+
+mas_installed_apps:
+  - { id: 775737590, name: "iA Writer" }
+  - { id: 1461456897, name: "Tyme 3 - Time tracking" }
+  - { id: 1451685025, name: "WireGuard" }
+  - { id: 441258766, name: "Magnet" }
+  - { id: 824183456, name: "Affinity Photo" }
+  - { id: 824171161, name: "Affinity Designer" }
+  - { id: 585829637, name: "Todoist" }
+  - { id: 747648890, name: "Telegram" }
+  - { id: 409201541, name: "Pages" }
+  - { id: 409203825, name: "Numbers" }
+  - { id: 409183694, name: "Keynote" }
+  - { id: 420212497, name: "Byword" }
+  - { id: 497799835, name: "Xcode" }

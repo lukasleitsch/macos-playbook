@@ -1,0 +1,33 @@
+- name: Install valet via composer
+  composer:
+    command: require
+    arguments: laravel/valet
+    global_command: yes
+
+- name: Ensure pecl is installed.
+  command: 'which pecl'
+  register: pecl_installed
+  tags:
+    - pecl
+
+- name: Fix pecl path
+  file:
+    src: "/usr/local/lib/php"
+    dest: "/usr/local/lib/php/pecl"
+    state: link
+  tags:
+    - pecl_link
+
+- debug: msg="{{ pecl_installed }} is an environment variable"
+  tags:
+    - pecl
+
+- name: Install PECL libaries.
+  shell: "yes '' | pecl install {{ item }}"
+  when: pecl_installed is succeeded
+  register: pecl_result
+  changed_when: pecl_result is succeeded
+  failed_when: "not (('already installed' in pecl_result.stdout) or ('install ok:' in pecl_result.stdout))"
+  with_items: "{{ php_pecl_extensions }}"
+  tags:
+    - pecl

@@ -1,0 +1,12 @@
+- name: Increase max files limit
+  become: yes
+  copy:
+    src: files/limit.maxfiles.plist
+    dest: /Library/LaunchDaemons/limit.maxfiles.plist
+    owner: root
+    group: wheel
+  notify:
+    - launchctl load limit.maxfiles
+  tags:
+    - macos-common
+
