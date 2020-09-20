@@ -20,6 +20,7 @@ homebrew_cask_packages:
   - 1password
   - alfred
   - appcleaner
+  - autodesk-fusion360
   - balenaetcher
   - banking-4
   - bartender
@@ -27,6 +28,7 @@ homebrew_cask_packages:
   - carbon-copy-cloner
   - discord
   - docker
+  - figma
   - firefox
   - fujitsu-scansnap-home
   - google-chrome
@@ -39,6 +41,7 @@ homebrew_cask_packages:
   - iterm2
   - kap
   - moneymoney
+  - mqtt-explorer
   - phpstorm
   - pock
   - portfolioperformance
@@ -50,6 +53,7 @@ homebrew_cask_packages:
   - sublime-text
   - tableplus
   - teamviewer
+  - tinkerwell
   - tower
   - transmit
   - tunnelblick
@@ -58,6 +62,7 @@ homebrew_cask_packages:
   - virtualbox-extension-pack
   - visual-studio-code
   - whatsapp
+  - zeplin
 
 mas_installed_apps:
   - { id: 775737590, name: "iA Writer" }
