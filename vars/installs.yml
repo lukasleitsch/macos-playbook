@@ -73,3 +73,8 @@ mas_installed_apps:
   - { id: 409183694, name: "Keynote" }
   - { id: 420212497, name: "Byword" }
   - { id: 497799835, name: "Xcode" }
+
+composer_packages:
+  - laravel/valet
+  - laravel/installer
+  - hirak/prestissimo

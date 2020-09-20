@@ -1,0 +1,6 @@
+- name: Install global composer packages
+  composer:
+    command: require
+    arguments: '{{ item }}'
+    global_command: yes
+  loop: '{{ composer_packages }}'

@@ -9,6 +9,9 @@
       when: mas_installed_apps|length > 0
       tags:
         - mas
+    - role: composer
+      tags: 
+        - composer
     - role: valet
       tags: 
         - valet

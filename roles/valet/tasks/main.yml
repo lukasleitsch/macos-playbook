@@ -1,9 +1,3 @@
-- name: Install valet via composer
-  composer:
-    command: require
-    arguments: laravel/valet
-    global_command: yes
-
 - name: Ensure pecl is installed.
   command: 'which pecl'
   register: pecl_installed
