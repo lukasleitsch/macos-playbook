@@ -15,6 +15,16 @@
   tags:
     - brew-cask
 
+- name: Install homebrew cask packages on MacBook Pro
+  homebrew_cask:
+    name: '{{ item }}'
+    state: installed
+  loop: '{{ homebrew_cask_packages_pro }}'
+  when: "'MacBookPro' in ansible_product_name"
+  tags:
+    - brew-cask
+    - macbook-pro
+
 - name: homebrew cleanup
   command: brew cleanup
   tags:

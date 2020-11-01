@@ -22,7 +22,6 @@ homebrew_cask_packages:
   - 1password
   - alfred
   - appcleaner
-  - autodesk-fusion360
   - balenaetcher
   - banking-4
   - bartender
@@ -30,9 +29,7 @@ homebrew_cask_packages:
   - carbon-copy-cloner
   - discord
   - docker
-  - figma
   - firefox
-  - fujitsu-scansnap-home
   - google-chrome
   - grandtotal
   - hazel
@@ -61,11 +58,16 @@ homebrew_cask_packages:
   - transmit
   - tunnelblick
   - ultimaker-cura
-  - virtualbox
-  - virtualbox-extension-pack
   - visual-studio-code
   - whatsapp
   - zeplin
+
+homebrew_cask_packages_pro:
+  - autodesk-fusion360
+  - figma
+  - fujitsu-scansnap-home
+  - virtualbox
+  - virtualbox-extension-pack
 
 mas_installed_apps:
   - { id: 775737590, name: "iA Writer" }
