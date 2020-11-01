@@ -28,3 +28,16 @@
   with_items: "{{ homebrew_services }}"
   tags:
     - brew
+
+- name: Get state of brew analytics
+  command: "brew analytics state"
+  register: brew_analytics_result
+  tags:
+    - brew
+
+- name: Disable brew analytics
+  command: "brew analytics off"
+  register: brew_analytics_result
+  when: "'enabled' in brew_analytics_result.stdout"
+  tags:
+    - brew
