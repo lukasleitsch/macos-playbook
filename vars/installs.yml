@@ -11,7 +11,7 @@ homebrew_packages:
   - php
   - redis
   - rsync
-  - Schniz/tap/fnm
+  - fnm
   - speedtest-cli
   - wp-cli
   - wget
