@@ -46,6 +46,7 @@
   register: php_version_result
   tags:
     - pecl
+    - php-config
 
 - debug:
     msg: "{{ php_version_result.stdout_lines | last }}"
@@ -62,3 +63,14 @@
     - restart PHP
   tags:
     - pecl
+
+- name: Copy php config files
+  template:
+    src: "{{ item }}.j2"
+    dest: "/usr/local/etc/php/{{ php_version_result.stdout_lines | last }}/conf.d/{{ item }}"
+  with_items:
+    - ext-xdebug.ini
+    - ext-imagick.ini
+    - zz-custom.ini
+  tags:
+    - php-config
