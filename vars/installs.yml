@@ -15,6 +15,8 @@ homebrew_packages:
   - speedtest-cli
   - wp-cli
   - wget
+  - pkg-config
+  - imagemagick
 
 homebrew_cask_packages:
   - 1password
@@ -34,6 +36,7 @@ homebrew_cask_packages:
   - google-chrome
   - grandtotal
   - hazel
+  - home-assistant
   - homebrew/cask-drivers/logitech-options
   - homebrew/cask-versions/google-chrome-canary
   - imageoptim
@@ -82,4 +85,3 @@ mas_installed_apps:
 composer_packages:
   - laravel/valet
   - laravel/installer
-  - hirak/prestissimo
