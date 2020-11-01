@@ -23,6 +23,12 @@
   tags:
     - pecl
 
+- name: Remove PECL libaries.
+  command: "pecl uninstall {{ item }}"
+  with_items: "{{ php_pecl_extensions }}"
+  tags:
+    - pecl
+
 - name: Install PECL libaries.
   shell: "yes '' | pecl install {{ item }}"
   when: pecl_installed is succeeded
@@ -30,5 +36,29 @@
   changed_when: pecl_result is succeeded
   failed_when: "not (('already installed' in pecl_result.stdout) or ('install ok:' in pecl_result.stdout))"
   with_items: "{{ php_pecl_extensions }}"
+  notify:
+    - restart PHP
+  tags:
+    - pecl
+
+- name: Get PHP Version
+  command: "php -r \"$v=explode('.', PHP_VERSION); echo implode('.', array_splice($v, 0, -1));\""
+  register: php_version_result
+  tags:
+    - pecl
+
+- debug:
+    msg: "{{ php_version_result.stdout_lines | last }}"
+  tags:
+    - pecl
+
+- name: Remove PECL libaries from php.ini file
+  lineinfile:
+    dest: "/usr/local/etc/php/{{ php_version_result.stdout_lines | last }}/php.ini"
+    regexp: '\"{{ item }}.so\"$'
+    state: absent
+  with_items: "{{ php_pecl_extensions }}"
+  notify:
+    - restart PHP
   tags:
     - pecl
