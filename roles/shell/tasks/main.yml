@@ -1,4 +1,5 @@
-- git:
+- name: "Clone dotfiles"
+  git:
     repo: git@gitlab.leitsch.org:lukas/dotfiles.git
     dest: "{{ lookup('env','HOME') }}/.dotfiles"
 
