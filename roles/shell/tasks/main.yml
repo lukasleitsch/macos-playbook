@@ -34,6 +34,12 @@
   when: oh_my_fish_dir.stat.exists == False
   become_user: "{{ lookup('env','USER') }}"
 
+- name: "Setup fish config"
+  file:
+    src: "{{ ansible_env.HOME }}/.dotfiles/config.fish"
+    dest: "{{ ansible_env.HOME }}/.config/fish/config.fish"
+    state: link
+
 - name: "Add symlink to ssh config file"
   file:
     src: "{{ ansible_env.HOME }}/Resilio Sync/Settings/ssh/config"
