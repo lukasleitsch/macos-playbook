@@ -6,6 +6,7 @@ This Ansible playbook installs and configure my macOS for web development. The p
 - Install Homebrew
 - Install Ansible `brew install ansible`
 - Install requirements `ansible-galaxy install -r requirements.yml`
+- Sign in App Store
 
 ## Run
 - Run playbook `ansible-playbook main.yml`
