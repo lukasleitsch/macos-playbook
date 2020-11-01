@@ -32,3 +32,15 @@
         state: absent
   when: oh_my_fish_dir.stat.exists == False
   become_user: "{{ lookup('env','USER') }}"
+
+- name: "Add symlink to ssh config file"
+  file:
+    src: "{{ ansible_env.HOME }}/Resilio Sync/Settings/ssh/config"
+    dest: "{{ ansible_env.HOME }}/.ssh/config"
+    state: link
+
+- name: Add symlink to ssh condig.d"
+  file:
+    src: "{{ ansible_env.HOME }}/Resilio Sync/Settings/ssh/config.d"
+    dest: "{{ ansible_env.HOME }}/.ssh/config.d"
+    state: link
