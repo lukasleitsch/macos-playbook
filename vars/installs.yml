@@ -2,21 +2,22 @@ homebrew_packages:
   - asimov
   - composer
   - fish
+  - fnm
   - git
   - htop
+  - imagemagick
   - mailhog
   - mariadb
   - mas
   - ncdu
+  - openssh
   - php
+  - pkg-config
   - redis
   - rsync
-  - fnm
   - speedtest-cli
-  - wp-cli
   - wget
-  - pkg-config
-  - imagemagick
+  - wp-cli
 
 homebrew_cask_packages:
   - 1password
@@ -43,7 +44,6 @@ homebrew_cask_packages:
   - moneymoney
   - mqtt-explorer
   - phpstorm
-  - pock
   - portfolioperformance
   - resilio-sync
   - rocket
@@ -66,6 +66,7 @@ homebrew_cask_packages_pro:
   - autodesk-fusion360
   - figma
   - fujitsu-scansnap-home
+  - pock
   - virtualbox
   - virtualbox-extension-pack
 
