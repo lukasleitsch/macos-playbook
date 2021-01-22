@@ -18,6 +18,9 @@ homebrew_packages:
   - speedtest-cli
   - wget
   - wp-cli
+  - p7zip
+  - jq
+  - ocrmypdf
 
 homebrew_cask_packages:
   - 1password
@@ -31,13 +34,11 @@ homebrew_cask_packages:
   - discord
   - docker
   - firefox
-  - google-chrome
-  - grandtotal
   - hazel
   - home-assistant
   - homebrew/cask-drivers/logitech-options
-  - homebrew/cask-versions/google-chrome-canary
   - imageoptim
+  - insomnia
   - istat-menus
   - iterm2
   - kap
@@ -69,6 +70,7 @@ homebrew_cask_packages_pro:
   - pock
   - virtualbox
   - virtualbox-extension-pack
+  - microsoft-edge
 
 mas_installed_apps:
   - { id: 775737590, name: "iA Writer" }
