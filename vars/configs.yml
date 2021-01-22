@@ -6,4 +6,3 @@ homebrew_services:
 
 php_pecl_extensions:
   - xdebug
-  - imagick

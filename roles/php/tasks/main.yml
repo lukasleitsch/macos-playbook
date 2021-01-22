@@ -70,7 +70,6 @@
     dest: "/usr/local/etc/php/{{ php_version_result.stdout_lines | last }}/conf.d/{{ item }}"
   with_items:
     - ext-xdebug.ini
-    - ext-imagick.ini
     - zz-custom.ini
   tags:
     - php-config
