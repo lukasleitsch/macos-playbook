@@ -25,7 +25,7 @@
   block:
     - name: "Download oh-my-fish installer"
       get_url:
-        url: https://get.oh-my.fish
+        url: https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install
         dest: "{{ ansible_env.HOME }}/.oh-my-fish-install.sh"
         owner: "{{ lookup('env','USER') }}"
         mode: u+rwx
