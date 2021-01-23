@@ -3,11 +3,15 @@
     repo: git@gitlab.leitsch.org:lukas/dotfiles.git
     dest: "{{ lookup('env','HOME') }}/.dotfiles"
 
+- name: "Get path fish shell"
+  command: which fish
+  register: fish_path
+
 - name: 'Change shell to fish'
   become: yes
   user:
     name: '{{ ansible_user_id }}'
-    shell: /usr/local/bin/fish
+    shell: "{{ fish_path.stdout }}"
     state: present
 
 - name: "Check for existing oh-my-fish install"
