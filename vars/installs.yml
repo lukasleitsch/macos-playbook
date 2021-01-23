@@ -34,6 +34,7 @@ homebrew_cask_packages:
   - discord
   - docker
   - firefox
+  - fujitsu-scansnap-home
   - hazel
   - home-assistant
   - homebrew/cask-drivers/logitech-options
@@ -66,7 +67,6 @@ homebrew_cask_packages:
 homebrew_cask_packages_pro:
   - autodesk-fusion360
   - figma
-  - fujitsu-scansnap-home
   - pock
   - virtualbox
   - virtualbox-extension-pack
