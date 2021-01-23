@@ -4,6 +4,7 @@
     state: latest
     update_homebrew: yes
   loop: '{{ homebrew_packages }}'
+  ignore_errors: yes
   tags:
     - brew
 
