@@ -12,6 +12,9 @@
     - role: php
       tags: 
         - php
+    - role: npm
+      tags: 
+        - npm
 
 - name: "Configuration"
   hosts: localhost

@@ -90,3 +90,6 @@ mas_installed_apps:
 composer_packages:
   - laravel/valet
   - laravel/installer
+
+npm_packages:
+  - '@bchatard/alfred-jetbrains'
