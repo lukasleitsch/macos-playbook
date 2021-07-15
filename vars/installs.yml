@@ -68,8 +68,6 @@ homebrew_cask_packages_pro:
   - autodesk-fusion360
   - figma
   - pock
-  - virtualbox
-  - virtualbox-extension-pack
   - microsoft-edge
 
 mas_installed_apps:
