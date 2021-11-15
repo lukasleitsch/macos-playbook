@@ -40,15 +40,16 @@
 
 - name: "Setup fish config file"
   file:
-    src: "{{ ansible_env.HOME }}/.dotfiles/fish/onfig.fish"
+    src: "{{ ansible_env.HOME }}/.dotfiles/fish/config.fish"
     dest: "{{ ansible_env.HOME }}/.config/fish/config.fish"
     state: link
 
 - name: "Setup fish config directory"
   file:
-    src: "{{ ansible_env.HOME }}/.dotfiles/fish/conf.d"
-    dest: "{{ ansible_env.HOME }}/.config/fish/conf.d"
+    src: "{{ ansible_env.HOME }}/.dotfiles/fish/conf.d/{{ item }}"
+    dest: "{{ ansible_env.HOME }}/.config/fish/conf.d/{{ item }}"
     state: link
+  with_items: "{{ fish_conf_files }}"
 
 - name: "Add symlink to ssh config file"
   file:
@@ -61,3 +62,4 @@
     src: "{{ ansible_env.HOME }}/Sync/Settings/ssh/config.d"
     dest: "{{ ansible_env.HOME }}/.ssh/config.d"
     state: link
+  
