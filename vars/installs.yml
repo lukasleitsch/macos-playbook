@@ -2,15 +2,17 @@ homebrew_packages:
   - asimov
   - composer
   - fish
-  - fnm
   - git
   - htop
   - imagemagick
+  - jq
   - mailhog
   - mariadb
   - mas
+  - meilisearch
   - ncdu
-  - openssh
+  - ocrmypdf
+  - p7zip
   - php
   - pkg-config
   - redis
@@ -18,9 +20,6 @@ homebrew_packages:
   - speedtest-cli
   - wget
   - wp-cli
-  - p7zip
-  - jq
-  - ocrmypdf
 
 homebrew_cask_packages:
   - 1password
@@ -29,52 +28,43 @@ homebrew_cask_packages:
   - balenaetcher
   - banking-4
   - bartender
-  - browserosaurus
+  - brave-browser
   - carbon-copy-cloner
   - discord
-  - docker
   - firefox
   - fujitsu-scansnap-home
   - hazel
-  - home-assistant
   - homebrew/cask-drivers/logitech-options
   - imageoptim
   - insomnia
   - istat-menus
   - iterm2
   - kap
+  - microsoft-edge
   - moneymoney
   - mqtt-explorer
   - phpstorm
   - portfolioperformance
-  - resilio-sync
+  - raspberry-pi-imager
+  - rectangle
   - rocket
   - signal
   - slack
   - spotify
   - sublime-text
+  - syncthing
   - tableplus
   - teamviewer
-  - tinkerwell
   - tower
   - transmit
-  - tunnelblick
-  - ultimaker-cura
   - visual-studio-code
   - whatsapp
-  - zeplin
-
-homebrew_cask_packages_pro:
-  - autodesk-fusion360
-  - figma
-  - pock
-  - microsoft-edge
+  - zerotier-one
 
 mas_installed_apps:
   - { id: 775737590, name: "iA Writer" }
   - { id: 1461456897, name: "Tyme 3 - Time tracking" }
   - { id: 1451685025, name: "WireGuard" }
-  - { id: 441258766, name: "Magnet" }
   - { id: 824183456, name: "Affinity Photo" }
   - { id: 824171161, name: "Affinity Designer" }
   - { id: 585829637, name: "Todoist" }
@@ -82,8 +72,7 @@ mas_installed_apps:
   - { id: 409201541, name: "Pages" }
   - { id: 409203825, name: "Numbers" }
   - { id: 409183694, name: "Keynote" }
-  - { id: 420212497, name: "Byword" }
-  - { id: 497799835, name: "Xcode" }
+  - { id: 1475387142, name : "Tailscale" } 
 
 composer_packages:
   - laravel/valet
