@@ -63,3 +63,9 @@
     dest: "{{ ansible_env.HOME }}/.ssh/config.d"
     state: link
   
+- name: Add hushlogin file
+  file:
+    dest: "{{ ansible_env.HOME }}/.hushlogin"
+    state: touch
+    modification_time: preserve
+    access_time: preserve
