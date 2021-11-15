@@ -11,6 +11,7 @@ homebrew_packages:
   - mas
   - meilisearch
   - ncdu
+  - node
   - ocrmypdf
   - p7zip
   - php
@@ -43,6 +44,7 @@ homebrew_cask_packages:
   - microsoft-edge
   - moneymoney
   - mqtt-explorer
+  - obsidian
   - phpstorm
   - portfolioperformance
   - raspberry-pi-imager
@@ -54,7 +56,6 @@ homebrew_cask_packages:
   - sublime-text
   - syncthing
   - tableplus
-  - teamviewer
   - tower
   - transmit
   - visual-studio-code

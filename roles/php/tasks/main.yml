@@ -11,13 +11,21 @@
   tags:
     - pecl
 
-- name: Fix pecl path
-  file:
-    src: "/usr/local/lib/php"
-    dest: "/usr/local/lib/php/pecl"
-    state: link
+- name: Get pecl dir
+  command: pecl config-get ext_dir
+  register: pecl_ext_dir
   tags:
-    - pecl_link
+    - pecl
+
+- name: Create directory for pecl
+  ansible.builtin.file:
+    path: '{{ pecl_ext_dir.stdout }}'
+    state: directory
+
+- debug: msg="{{ pecl_ext_dir.stdout }}"
+  tags:
+    - pecl
+
 
 - debug: msg="{{ pecl_installed }} is an environment variable"
   tags:
@@ -55,7 +63,7 @@
 
 - name: Remove PECL libaries from php.ini file
   lineinfile:
-    dest: "/usr/local/etc/php/{{ php_version_result.stdout_lines | last }}/php.ini"
+    dest: "/opt/homebrew/etc/php/{{ php_version_result.stdout_lines | last }}/php.ini"
     regexp: '\"{{ item }}.so\"$'
     state: absent
   with_items: "{{ php_pecl_extensions }}"
@@ -67,7 +75,7 @@
 - name: Copy php config files
   template:
     src: "{{ item }}.j2"
-    dest: "/usr/local/etc/php/{{ php_version_result.stdout_lines | last }}/conf.d/{{ item }}"
+    dest: "/opt/homebrew/etc/php/{{ php_version_result.stdout_lines | last }}/conf.d/{{ item }}"
   with_items:
     - ext-xdebug.ini
     - zz-custom.ini
