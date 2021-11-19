@@ -3,6 +3,7 @@ homebrew_packages:
   - composer
   - fish
   - git
+  - homebrew/cask-fonts/font-jetbrains-mono
   - htop
   - imagemagick
   - jq
@@ -73,7 +74,8 @@ mas_installed_apps:
   - { id: 409201541, name: "Pages" }
   - { id: 409203825, name: "Numbers" }
   - { id: 409183694, name: "Keynote" }
-  - { id: 1475387142, name : "Tailscale" } 
+  - { id: 1475387142, name: "Tailscale" } 
+  - { id: 1534275760, name: "LanguageTool" } 
 
 composer_packages:
   - laravel/valet
