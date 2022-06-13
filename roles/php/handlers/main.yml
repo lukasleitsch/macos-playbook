@@ -1,2 +1,2 @@
 - name: restart PHP
-  command: valet restart php
+  command: brew services restart php

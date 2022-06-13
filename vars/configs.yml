@@ -3,6 +3,11 @@ homebrew_services:
   - redis
   - asimov
   - mailhog
+  - meilisearch
 
 php_pecl_extensions:
   - xdebug
+
+fish_conf_files:
+ - aliases.fish
+ 

@@ -12,9 +12,14 @@
     - role: php
       tags: 
         - php
+    - role: npm
+      tags: 
+        - npm
 
 - name: "Configuration"
   hosts: localhost
+  vars_files:
+    - vars/configs.yml
   roles:
     - role: macos
       tags: 

@@ -9,7 +9,7 @@ This Ansible playbook installs and configure my macOS for web development. The p
 - Sign in App Store
 
 ## Run
-- Run playbook `ansible-playbook main.yml`
+- Run playbook `ansible-playbook main.yml --ask-become-pass`
 
 ## Inspired by
 
