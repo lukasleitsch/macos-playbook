@@ -46,12 +46,12 @@
 
 - name: "Add symlink to ssh config file"
   file:
-    src: "{{ ansible_env.HOME }}/Resilio Sync/Settings/ssh/config"
+    src: "{{ ansible_env.HOME }}/Nextcloud/Settings/ssh/config"
     dest: "{{ ansible_env.HOME }}/.ssh/config"
     state: link
 
 - name: Add symlink to ssh condig.d"
   file:
-    src: "{{ ansible_env.HOME }}/Resilio Sync/Settings/ssh/config.d"
+    src: "{{ ansible_env.HOME }}/Nextcloud/Settings/ssh/config.d"
     dest: "{{ ansible_env.HOME }}/.ssh/config.d"
     state: link
