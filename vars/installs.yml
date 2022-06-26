@@ -1,9 +1,9 @@
 homebrew_packages:
   - asimov
+  - btop
   - composer
   - fish
   - git
-  - homebrew/cask-fonts/font-jetbrains-mono
   - htop
   - imagemagick
   - jq
@@ -34,6 +34,7 @@ homebrew_cask_packages:
   - carbon-copy-cloner
   - discord
   - firefox
+  - font-jetbrains-mono
   - fujitsu-scansnap-home
   - hazel
   - homebrew/cask-drivers/logitech-options
@@ -55,7 +56,6 @@ homebrew_cask_packages:
   - slack
   - spotify
   - sublime-text
-  - syncthing
   - tableplus
   - tower
   - transmit
@@ -76,6 +76,7 @@ mas_installed_apps:
   - { id: 409183694, name: "Keynote" }
   - { id: 1475387142, name: "Tailscale" } 
   - { id: 1534275760, name: "LanguageTool" } 
+  - { id: 1289583905, name: "Pixelmator Pro" } 
 
 composer_packages:
   - laravel/valet
