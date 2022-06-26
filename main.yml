@@ -5,7 +5,7 @@
     - vars/configs.yml
   roles:
     - role: brew
-    - role: geerlingguy.mas
+    - role: geerlingguy.mac.mas
       when: mas_installed_apps|length > 0
       tags:
         - mas

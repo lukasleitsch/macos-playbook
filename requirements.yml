@@ -1,2 +1,6 @@
-- name: geerlingguy.mas
-- name: geerlingguy.php-pecl
+---
+roles:
+  - name: geerlingguy.php-pecl
+
+collections:
+  - name: geerlingguy.mac
