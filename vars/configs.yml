@@ -7,7 +7,3 @@ homebrew_services:
 
 php_pecl_extensions:
   - xdebug
-
-fish_conf_files:
- - aliases.fish
- 
