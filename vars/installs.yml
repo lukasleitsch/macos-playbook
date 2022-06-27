@@ -46,6 +46,7 @@ homebrew_cask_packages:
   - microsoft-edge
   - moneymoney
   - mqtt-explorer
+  - nextcloud
   - obsidian
   - phpstorm
   - portfolioperformance
