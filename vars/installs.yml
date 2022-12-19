@@ -27,7 +27,6 @@ homebrew_cask_packages:
   - 1password
   - alfred
   - appcleaner
-  - balenaetcher
   - banking-4
   - bartender
   - brave-browser
@@ -42,8 +41,6 @@ homebrew_cask_packages:
   - insomnia
   - istat-menus
   - iterm2
-  - kap
-  - microsoft-edge
   - moneymoney
   - mqtt-explorer
   - obsidian
