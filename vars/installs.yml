@@ -43,6 +43,7 @@ homebrew_cask_packages:
   - iterm2
   - moneymoney
   - mqtt-explorer
+  - nextcloud
   - obsidian
   - phpstorm
   - portfolioperformance
