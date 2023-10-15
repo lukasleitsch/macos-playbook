@@ -8,7 +8,7 @@ homebrew_packages:
   - imagemagick
   - jq
   - mailhog
-  - mariadb
+  - mysql
   - mas
   - meilisearch
   - ncdu
@@ -25,12 +25,9 @@ homebrew_packages:
 
 homebrew_cask_packages:
   - 1password
-  - alfred
   - appcleaner
-  - balenaetcher
   - banking-4
   - bartender
-  - brave-browser
   - carbon-copy-cloner
   - discord
   - firefox
@@ -41,15 +38,12 @@ homebrew_cask_packages:
   - insomnia
   - istat-menus
   - iterm2
-  - kap
-  - microsoft-edge
   - moneymoney
   - mqtt-explorer
   - obsidian
   - phpstorm
   - portfolioperformance
   - raspberry-pi-imager
-  - rectangle
   - rocket
   - signal
   - slack

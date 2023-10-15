@@ -1,9 +1,11 @@
 homebrew_services:
   - mariadb
   - redis
-  - asimov
   - mailhog
   - meilisearch
+
+homebrew_services_root:
+  - asimov
 
 php_pecl_extensions:
   - xdebug
